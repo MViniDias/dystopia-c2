@@ -37,7 +37,7 @@ Dystopia is equipped with a lot of features **some** of which are:
 
 Dystopia is better installed and used on Kali Linux:
 ```
-git clone https://github.com/3ct0s/Dystopia-c2
+git clone https://github.com/MViniDias/dystopia-c2
 cd ./Dystopia-c2
 chmod +x setup.sh
 ./setup.sh
