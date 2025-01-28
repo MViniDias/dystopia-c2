@@ -16,33 +16,35 @@
 
 ---
 
-## What is Dystopia?
+## O que é distopia?
+Dystopia é um gerador de malware que gera backdoors que usam plataformas online como C2s. Isso inclui Discord, Telegram e Github.
 
-Dystopia is a malware generator that generates backdoors which use online platforms as C2s. This includes Discord, Telegram and Github. 
+Nosso objetivo é provar que qualquer coisa pode ser um C2, se você quiser :) ...
 
-Our goal is to prove that anything can be a C2, if you want to :) ...
+## Como funciona?
 
-## How does it work?
+Os backdoors do Dystopia estão usando bibliotecas que permitem que o backdoor atue como um "Bot" para as plataformas mencionadas acima. Essencialmente, o invasor contata o bot e especifica um comando malicioso para executar no "Agente" alvo.
 
-The Dystopia backdoors are using libraries which allow the backdoor to act as a "Bot" for the above-mentioned platforms. Essentially the attacker contacts the bot and specifies a malicious command to execute on the target "Agent". 
+Dystopia é equipado com muitos recursos, alguns dos quais são:
 
-Dystopia is equipped with a lot of features **some** of which are:
-- Encrypted traffic (HTTPS)
-- Running system commands on target Agent
-- Keylogger (Limited to Discord)
-- Grabbing webcam snaps
-- Multiple online agents at a time (Limited to Discord & GitHub)
+Tráfego criptografado (HTTPS)
+Executando comandos do sistema no agente de destino
+Keylogger (limitado ao Discord)
+Capturando fotos da webcam
+Vários agentes online ao mesmo tempo (limitado ao Discord e GitHub)
 
-## Installation and Usage
+## Instalaão e uso
+ # tenha o git intalado na maquina pode usar o comando 
+sudo apt install git
 
-Dystopia is better installed and used on Kali Linux:
+O Dystopia é melhor instalado e usado no Kali Linux:
 ```
 git clone https://github.com/MViniDias/dystopia-c2
 cd ./Dystopia-c2
 chmod +x setup.sh
 ./setup.sh
 ```
-Once this is done we can use the builder. Let's build a discord based C2 backdoor:
+ma vez feito isso, podemos usar o builder. Vamos construir um backdoor C2 baseado em discord:
 ```
 python builder.py
 use discord
@@ -54,13 +56,12 @@ set webhook <discord webhook>
 build
 ```
 
-## How to Setup Dystopia
-Since the setup process is very specific for each platform:
+## Como configurar o Dystopia
+Como o processo de configuração é muito específico para cada plataforma:
+> Siga o [setup guide](https://github.com/3ct0s/dystopia-c2/wiki/) para configurar o Dystopia
 
-> Please follow the [setup guide](https://github.com/3ct0s/dystopia-c2/wiki/) to setup Dystopia.
+## Contribuidores
+Contribuições são bem-vindas ao nosso repositório GitHub! Valorizamos o envolvimento da comunidade e apreciamos todos os tipos de contribuições, de relatórios de bugs a códigos. Junte-se a nós para construir algo ótimo e causar um impacto positivo no mundo. Envolva-se hoje mesmo!
 
-## Contributors
-Contributions are welcome to our GitHub repo! We value community involvement and appreciate all types of contributions, from bug reports to code. Join us in building something great and making a positive impact on the world. Get involved today!
-
-## Disclaimer
-This github repository is made for educational purposes only. The developer is not responsible for any misuse of this software. **Do not use this software for illegal purposes.**
+## Isenção de responsabilidade
+Este repositório github é feito apenas para fins educacionais. O desenvolvedor não é responsável por qualquer uso indevido deste software. Não use este software para fins ilegais.
